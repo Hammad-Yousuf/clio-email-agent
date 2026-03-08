@@ -130,8 +130,8 @@ def audit_log(operation: str):
     Args:
         operation: Name of the operation being performed
     """
-    def decorator(func):
-        @wraps(func)
+    def decorator(handler):
+        @wraps(handler)
         async def wrapper(req: func.HttpRequest, *args, **kwargs):
             start_time = datetime.datetime.utcnow()
             conn_str = os.environ.get("AUDIT_LOG_CONNECTION_STRING")
