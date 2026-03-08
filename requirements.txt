@@ -1,0 +1,18 @@
+# Azure Functions Core
+azure-functions>=1.18.0
+
+# HTTP Client
+requests>=2.31.0
+
+# Azure Storage
+azure-storage-blob>=12.19.0
+azure-data-tables>=12.5.0
+
+# Environment Configuration
+python-dotenv>=1.0.0
+
+# Data Processing
+pydantic>=2.5.0
+
+# Utilities
+python-dateutil>=2.8.2
