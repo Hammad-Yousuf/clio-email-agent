@@ -615,7 +615,7 @@ async def _load_matters(
     """
     cache_valid = False
     cached_data = None
-    
+    os.makedirs(os.path.dirname(CACHE_FILE_PATH), exist_ok=True)
     # Try to load from cache
     if not force_refresh and os.path.exists(CACHE_FILE_PATH):
         try:
