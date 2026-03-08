@@ -12,8 +12,8 @@
     
     "REVIEW_QUEUE_MATTER_ID": "your_review_queue_matter_id",
     "CONFIDENCE_THRESHOLD": "0.7",
-    "CACHE_DIR": ".local_cache",
-    "CACHE_FILE_PATH": ".local_cache/matters_cache.json",
+    "CACHE_DIR": "/tmp/cache",
+    "CACHE_FILE_PATH": "/tmp/cache/matters_cache.json",
     "AUDIT_LOG_CONNECTION_STRING": "UseDevelopmentStorage=true"
   },
   "Host": {
