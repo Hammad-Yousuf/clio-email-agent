@@ -15,6 +15,7 @@ import os
 import json
 import logging
 import datetime
+import tempfile
 from typing import Dict, List, Any, Optional
 from functools import wraps
 
@@ -615,7 +616,7 @@ async def _load_matters(
     """
     cache_valid = False
     cached_data = None
-    os.makedirs(os.path.dirname(CACHE_FILE_PATH), exist_ok=True)
+    CACHE_FILE_PATH = os.environ.get("CACHE_FILE_PATH", os.path.join(tempfile.gettempdir(), "matters_cache.json"))
     # Try to load from cache
     if not force_refresh and os.path.exists(CACHE_FILE_PATH):
         try:
